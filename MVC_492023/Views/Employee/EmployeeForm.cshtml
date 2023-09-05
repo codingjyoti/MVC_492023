@@ -1,6 +1,6 @@
 ﻿
 @{
-    ViewBag.Title = "EmployeeForm";
+//ViewBag.Title = "EmployeeForm";
 }
 
 <h2>EmployeeForm</h2>
@@ -35,7 +35,6 @@
 
     function INSERT()
     { 
-
         $.ajax({
             url: 'Employee/EmployeeData',
             type: 'post',
@@ -54,12 +53,6 @@
 
                 alert("data not saved!!");
             }
-
-            
-
-
-
-
         });
     }
 </script>

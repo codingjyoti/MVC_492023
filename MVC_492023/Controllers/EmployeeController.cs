@@ -10,7 +10,7 @@ namespace MVC_492023.Controllers
 {
     public class EmployeeController : Controller
     {
-        SqlConnection con = new SqlConnection("data source=DESKTOP-GGGBJHR//SQLEXPRESS;initial catalog=MVC_492023;integrated security=true");
+        SqlConnection con = new SqlConnection("data source=DESKTOP-IOJE25P\\SQLEXPRESS;initial catalog=MVC_492023;integrated security=true");
         public ActionResult EmployeeForm()
         {
             return View();
@@ -19,7 +19,6 @@ namespace MVC_492023.Controllers
 
         public void EmployeeData(string A, int B, int C)
         {
-
             con.Open();
             SqlCommand cmd = new SqlCommand("employeeInsert", con);
             cmd.CommandType = CommandType.StoredProcedure;
@@ -28,8 +27,6 @@ namespace MVC_492023.Controllers
             cmd.Parameters.AddWithValue("@age",C);
             cmd.ExecuteNonQuery();
             con.Close();
-
-     
         }
     }
 }
